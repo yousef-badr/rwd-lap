@@ -1,0 +1,81 @@
+body{
+    background-color: lightblue;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+section{
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-areas: 
+       "rect2 rect1 rect1"
+       "rect2 square1 rect4"
+       "rect3 rect3 rect4";
+}
+
+section .rect1,.rect2,.rect3,.rect4{
+    background-color: black;
+    margin: 1px;
+}
+
+.rect1{
+    height: 200px;
+    width: 300px;
+    grid-area: rect1;
+}
+
+.rect2{
+    height: 300px;
+    width: 200px;
+    grid-area: rect2;
+}
+
+.rect3{
+    height: 200px;
+    width: 300px;
+    grid-area: rect3;
+}
+
+.rect4{
+    height: 300px;
+    width: 200px;
+    grid-area: rect4;
+}
+
+.square1{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    grid-area: square1;
+}
+
+@media (max-width:500px){
+    section{
+       transform: rotate(90deg);
+    }
+}
+
+@media (min-width:501px) and (max-width:700px){
+    section{
+       transform: rotate(60deg);
+    }
+}
+
+@media (min-width:701px) and (max-width:900px){
+    section{
+       transform: rotate(30deg);
+    }
+}
